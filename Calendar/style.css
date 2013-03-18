@@ -1,0 +1,54 @@
+.calendar {
+	border: 3px solid;
+	background-color: rgb(206,206,206);
+	position: absolute;
+	top: 150px;
+}
+
+thead, tbody {
+	border-collapse: collapse;
+}
+
+th {
+	border: 2px groove;
+}
+
+td {
+	border: 2px groove ;
+	width: 80px;
+	height: 80px;
+	text-align: center; 
+}
+
+#prevYear, #nextYear, div.year {
+	background-color: yellow;
+	display: inline;
+	float: left;
+}
+
+#month,  #prevMonth, #nextMonth {
+	background-color: red;
+	display: inline;
+}
+
+#image, h1 {
+	display: inline;
+}
+
+#image {
+	z-index: 1;
+}
+
+h1 {
+	position: absolute;
+	z-index: 2;
+	top: 30px;
+	left: 80px;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.tabEvent {
+	left: 600px;
+	text-align: center;
+}
