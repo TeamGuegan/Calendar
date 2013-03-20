@@ -1,8 +1,8 @@
 .calendar {
 	border: 3px solid;
 	background-color: rgb(206,206,206);
-	position: absolute;
-	top: 150px;
+	float: left;
+	margin-right: 20%;
 }
 
 thead, tbody {
@@ -40,7 +40,7 @@ td {
 }
 
 h1 {
-	position: absolute;
+	position: relative;
 	z-index: 2;
 	top: 30px;
 	left: 80px;
@@ -49,6 +49,8 @@ h1 {
 }
 
 .tabEvent {
-	left: 600px;
+	float: right;
+	/*position: relative;
+	left: 600px;*/
 	text-align: center;
 }
