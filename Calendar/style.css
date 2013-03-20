@@ -1,12 +1,10 @@
-.calendar {
+table.calendar {
 	border: 3px solid;
 	background-color: rgb(206,206,206);
 	float: left;
-	margin-right: 20%;
-}
+	margin-right: 5%;
+	display: inline;
 
-thead, tbody {
-	border-collapse: collapse;
 }
 
 th {
@@ -17,35 +15,41 @@ td {
 	border: 2px groove ;
 	width: 80px;
 	height: 80px;
-	text-align: center; 
+	text-align: center;
+	background-color: white; 
 }
 
-#prevYear, #nextYear, div.year {
-	background-color: yellow;
-	display: inline;
-	float: left;
+#month, div.year {
+	border: solid 1px black;
+	box-shadow: 2px 2px 1px #aaa;
+	background-color: #F5F5F5;
 }
 
-#month,  #prevMonth, #nextMonth {
-	background-color: red;
-	display: inline;
+#allYear, div.year, #month, header h1, div.boutonannee, div.months, #prevYear {
+	display: inline-block;
 }
 
-#image, h1 {
-	display: inline;
+li {
+	list-style-type: none;
 }
 
 #image {
 	z-index: 1;
 }
 
-h1 {
+header h1 {
 	position: relative;
 	z-index: 2;
-	top: 30px;
-	left: 80px;
+	top: -30px;
+	left: -30px;
 	font-style: italic;
 	text-decoration: underline;
+}
+
+#formulaire {
+	float: right;
+	border: solid 1px;
+	border-radius: 5px; 
 }
 
 .tabEvent {
@@ -53,4 +57,12 @@ h1 {
 	/*position: relative;
 	left: 600px;*/
 	text-align: center;
+}
+
+div.boutonannee, div.months {
+	display: inline-block;
+}
+
+#sansJour {
+	background-color: rgb(206,206,206); 
 }

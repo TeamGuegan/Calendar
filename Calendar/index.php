@@ -26,7 +26,14 @@
     <body>
         <header>
         	<img id="image" src="calendrier.jpg" alt="calendar" width="100" height="100" />
-        	<h1>Calendrier<h1>
+        	<h1>Calendrier</h1>
+        	<form id="formulaire" method="post" action="connexion.php">
+        		<p> 
+        			Utilisateur : <input type="text" name="user">
+        		    Mot de passe : <input type="text" name="password">
+        		    <input type="submit" value="se connecter">
+        		</p>
+        	</form>
         </header>
         <section>
         <?php 
@@ -45,12 +52,14 @@
 //         $nowDay = $now->format('j');
         $tab = $date->getAllDateForMonth($year, $month);
         ?>
-        <input type="button" name="prevYear" id="prevYear" value="<<" />
-        <div id="AllYear"></div>
-        <div class="year"><?php echo $year?></div>
-        <input type="button" name="nextYear" id="nextYear" value=">>" />
-        <div id="AllMonth"></div>
-        <div class="$months">
+        <div class="boutonannee"> 
+        	<input type="button" name="prevYear" id="prevYear" value="<<" />
+        	<div id="AllYear"></div>
+        	<div class="year"><?php echo $year?></div>
+        	<input type="button" name="nextYear" id="nextYear" value=">>" />
+        	<div id="AllMonth"></div>
+        </div>
+        <div class="months">
             <input type="button" name="prevMonth" id="prevMonth" value="<<" />
             <li id="month"><?php echo($date->months[$month - 1]);?></li>
             <input type="button" name="nextMonth" id="nextMonth" value=">>" />
@@ -79,7 +88,7 @@
                             foreach ($days as $d => $w) {
                                 if ($d == 1 && $w != 1) {
                                     ?>
-                                    <td id="test" colspan="<?php echo $w - 1;?>"></td>
+                                    <td id="sansJour" colspan="<?php echo $w - 1;?>"></td>
                                     <?php     
                                 }
                                 ?>
